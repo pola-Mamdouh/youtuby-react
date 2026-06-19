@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f4f4f4;
+}
+
+* {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Card hover lift */
+.card-hover:hover {
+  transform: translateY(-0.9%);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Watch-later: hidden by default, show on card hover */
+.card-hover .watch-later {
+  opacity: 0;
+}
+.card-hover:hover .watch-later {
+  opacity: 1;
+}
+
+/* Card image scale on hover */
+.card-hover:hover .card-img-scale {
+  transform: scale(1.1);
+}
+
+/* Play button overlay: hidden, show on card hover */
+.card-hover .play-btn {
+  display: none;
+}
+.card-hover:hover .play-btn {
+  display: inline;
+}
+
+/* Image brightness on hover (history/search) */
+.card-hover:hover .card-top-image {
+  filter: brightness(0.7);
+}
+
+/* Remove btn dark bg on hover */
+.card-hover:hover .remove-btn {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* Sidebar nav hover */
+.sidebar-link:hover {
+  background-color: #bf40bf;
+  color: white;
+}
+
+/* Scroll margin for anchor sections */
+.scroll-anchor {
+  scroll-margin-top: 56px;
+}
+
+/* Content title underline */
+.content-title {
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #bf40bf;
+  display: inline-block;
+}
+
+/* Comment reply button */
+.btn-comment {
+  background-color: #921192;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-comment:hover {
+  background-color: #b915b9;
+}
+
+/* Dropdown no transition */
+.dropdown-menu {
+  transition: none !important;
+}
+
+/* Navbar link hover */
+.nav-link-hover:hover {
+  color: white !important;
+  background-color: #bf40bf;
+  border-radius: 4px;
+}
+
+/* Active nav link */
+.nav-link-active {
+  color: white !important;
+  background-color: #bf40bf;
+  border-radius: 4px;
+}
+
+/* List group active item */
+.list-item-active {
+  background-color: #bf40bf !important;
+  border-color: #bf40bf !important;
+  color: white !important;
+}
